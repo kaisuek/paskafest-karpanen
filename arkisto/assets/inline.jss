@@ -1,0 +1,235 @@
+description {
+  display: none;
+}
+
+/* Tausta */
+
+body {
+  background-color: #f2f238;
+}
+
+/* Hero */
+
+.hero {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-logo {
+  max-height: 100%;
+  max-width: 80%;
+  height: auto;
+}
+
+
+/* Otsikko 1 (h1) */
+h1 {
+  font-family: 'Comic Neue', 'Comic Sans MS', 'Comic Sans', 'Marker Felt', 'fantasy', sans-serif;
+  color: #4B0082; /* tumma violetti */
+  font-size: 4em;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+/* teksti otsikon alla */
+
+.teksti {
+  text-align: center; 
+  width: 100%;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+
+/* Otsikko 2 (h2) */
+
+h2 {
+  font-family: 'Comic Neue', 'Comic Sans MS', 'Comic Sans', 'Marker Felt', 'fantasy', sans-serif;
+  color: #4B0082;
+  text-align: center;
+  font-size: 3em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+/* Leipäteksti (p) */
+p {
+  font-family: 'Quicksand', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 2em;
+  line-height: 1.5em;
+  text-align: center;
+  color: #222;
+  margin-bottom: 1em;
+}
+
+/* Kärpänen*/
+
+    .fly {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/73/Fly_icon_01.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      pointer-events: none;
+    }
+
+/* Artistigalleria*/
+
+/* Galleriaosan ulkoasu */
+
+.artist-gallery-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.artist-gallery-wrapper {
+  padding: 2rem 1rem;
+}
+
+/* Otsikko ja johdantoteksti */
+.artist-gallery-wrapper h2 {
+  font-family: 'Comic Neue', 'Comic Sans MS', 'Comic Sans', 'Marker Felt', 'fantasy', sans-serif;
+  color: #4B0082;
+  font-size: 3em;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* Itse galleria: vaakarullaus */
+.artist-gallery {
+  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  flex: 1;
+}
+
+
+/* Rivi jossa kortit */
+.artist-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  -webkit-overflow-scrolling: touch; /* iOS smooth scroll */
+  scrollbar-width: none; /* Firefox */
+}
+
+.artist-track::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+/* Yksi artistikortti */
+
+.artist {
+  min-width: 600px;
+  flex-shrink: 0;
+  /*background: #fff, opacity: 0.75;*/
+  padding: 1.5rem;
+  border-radius: 4px;
+  /* box-shadow: 2px 2px 8px rgba(0,0,0,0.1);*/
+  text-align: center;
+}
+
+/* Kuva */
+.artist img {
+  width: 600px;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Bändin nimi */
+.artist h3 {
+  font-family: 'Comic Neue', 'Comic Sans MS', 'Comic Sans', 'Marker Felt', 'fantasy', sans-serif;
+  color: #4B0082;
+  font-size: 2em;
+  margin: 1.5rem 0;
+  max-width: 400px;
+  margin: 0 auto; /* keskittää tekstin kortissa */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  padding: 1rem;
+}
+
+/* Sepon oma */
+
+#seppo {
+  background: linear-gradient(to right, green, white, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* Firefox-tuki */
+  font-weight: bold;
+}
+
+/* Esittelyteksti */
+.artist p {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 2rem;
+  max-width: 500px;
+  margin: 0 auto; /* keskittää tekstin kortissa */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  padding: 1rem;
+}
+
+/* Linkit */
+.artist-links a {
+  font-family: 'Quicksand', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  display: inline-block;
+  font-size: 1.5em;
+  margin: 0 0.25rem;
+  color: #4B0082;
+  border-bottom: 1px solid transparent;
+}
+
+.artist-links a:hover {
+  border-bottom-color: #4B0082;
+}
+
+.artist-gallery-container {
+  position: relative;
+}
+
+.artist-gallery {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Nuolet */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #4B0082;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 5px;
+  opacity: 0.8;
+}
+
+.scroll-btn:hover {
+  opacity: 1;
+}
+
+.scroll-btn.left {
+  left: 0.25rem;
+}
+
+.scroll-btn.right {
+  right: 0.25rem;
+}
