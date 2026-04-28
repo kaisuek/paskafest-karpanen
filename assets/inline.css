@@ -267,3 +267,38 @@ p {
 .scroll-btn.right {
   right: 0.25rem;
 }
+
+/* Laskuri */
+
+.paska-counter {
+  max-width: 420px;
+  margin: 3rem auto;
+  padding: 1.5rem;
+  text-align: center;
+  border: 3px dashed #4B0082;
+  border-radius: 18px;
+  background: #fff7c2;
+  box-shadow: 8px 8px 0 #4B0082;
+  transform: rotate(-1deg);
+}
+
+.counter-label {
+  font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
+  font-size: 14px;
+  color: #4B0082;
+  margin-bottom: 0.75rem;
+}
+
+.counter-number {
+  font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
+  font-size: 4rem;
+  line-height: 1;
+  color: #2f7d32;
+  text-shadow: 3px 3px 0 #ff8ad8;
+}
+
+.counter-note {
+  margin-top: 0.75rem;
+  font-size: 13px;
+  color: #333;
+}
