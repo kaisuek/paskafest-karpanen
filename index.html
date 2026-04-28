@@ -233,6 +233,18 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
+<p>Kävijälaskuri <span id="visitor-count">...</span></p>
+
+<script>
+  fetch('https://api.countapi.xyz/hit/paskafest.vip/visits')
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById('visitor-count').textContent = data.value;
+    })
+    .catch(() => {
+      document.getElementById('visitor-count').textContent = '?';
+    });
+</script>
 
 </body>
 </html>
