@@ -236,13 +236,50 @@ document.addEventListener('DOMContentLoaded', () => {
 <p>Kävijälaskuri <span id="visitor-count">...</span></p>
 
 <script>
-  fetch('https://api.countapi.xyz/hit/paskafest.vip/visits')
-    .then(res => res.json())
+<div class="paska-counter">
+  <div class="counter-label">Kävijälaskuri</div>
+  <div class="counter-number" id="visitor-count">...</div>
+  <div class="counter-note" id="counter-note">vähän fiiliksen mukaan</div>
+</div>
+
+<script>
+  const counterEl = document.getElementById("visitor-count");
+  const noteEl = document.getElementById("counter-note");
+
+  const counterUrl = "https://countapi.mileshilliard.com/api/v1/hit/paskafest-visits";
+
+  function dailyChaosFactor() {
+    const today = new Date().toISOString().slice(0, 10);
+    let hash = 0;
+
+    for (let i = 0; i < today.length; i++) {
+      hash = today.charCodeAt(i) + ((hash << 5) - hash);
+    }
+
+    const normalized = Math.abs(hash % 41) - 20; 
+    return normalized / 100; // -20% ... +20%
+  }
+
+  fetch(counterUrl)
+    .then(response => response.json())
     .then(data => {
-      document.getElementById('visitor-count').textContent = data.value;
+      const realCount = data.value;
+      const chaos = dailyChaosFactor();
+      const fakeCount = Math.max(1, Math.round(realCount * (1 + chaos)));
+
+      counterEl.textContent = fakeCount;
+
+      if (chaos < -0.05) {
+        noteEl.textContent = "tänään laskuri vähättelee yleisöryntäystä";
+      } else if (chaos > 0.05) {
+        noteEl.textContent = "tänään laskuri valehtelee ylöspäin";
+      } else {
+        noteEl.textContent = "tänään laskuri on epäilyttävän lähellä totuutta";
+      }
     })
     .catch(() => {
-      document.getElementById('visitor-count').textContent = '?';
+      counterEl.textContent = "???";
+      noteEl.textContent = "laskuri meni paskaksi";
     });
 </script>
 
