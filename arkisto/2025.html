@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="assets/inline.css">
   <link rel="icon" type="image/svg+xml" href="assets/img/logo.png">
   <title>Paskafest 9.8.2025 Viikin paska-altaalla</title>
-  <description>Kiitos kaikille Paskafest 2025 kävijöille! Jo toista kertaa järjestetty mielenosoitus vaati tänäkin vuonna Lisää ilmaista paskaa Helsinkiin</description>
+  <description>Jo toista kertaa järjestetty mielenosoitus vaati tänäkin vuonna Lisää ilmaista paskaa Helsinkiin</description>
 </head>
 <body>
 
@@ -162,7 +162,7 @@ Arvot ovat tärkeinä pitämiämme asioita, jotka ohjaavat jokapäiväisessä ty
 
   <section id="location" style="position: relative; overflow: hidden;">
   <h2>Sijaintina Viikin paska-allas</h2>
-  <p>{{ location }}</p>
+  <p>Info</p>
 
   <!-- Google Maps iframe -->
   <div style="position: relative; z-index: 1;">
@@ -172,46 +172,11 @@ Arvot ovat tärkeinä pitämiämme asioita, jotka ohjaavat jokapäiväisessä ty
     </iframe>
   </div>
 
-  <!-- Emoji container -->
-  <div id="poop-emojis" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 2;"></div>
-
-  <script>
-    function createPoopEmoji() {
-      const emoji = document.createElement('div');
-      emoji.textContent = '💩';
-      emoji.style.position = 'absolute';
-      emoji.style.left = Math.random() * 100 + '%';
-      emoji.style.bottom = '-30px';
-      emoji.style.fontSize = '50px';
-      emoji.style.opacity = '1';
-      emoji.style.animation = `floatUp ${3 + Math.random() * 2}s linear forwards`;
-      document.getElementById('poop-emojis').appendChild(emoji);
-
-      setTimeout(() => emoji.remove(), 6000); // Clean up
-    }
-
-    setInterval(createPoopEmoji, 500); // Spawn one every 0.5 sec
-  </script>
-
-  <style>
-    @keyframes floatUp {
-      0% {
-        transform: translateY(0);
-        opacity: 0.8;
-      }
-      100% {
-        transform: translateY(-100vh);
-        opacity: 0;
-      }
-    }
-  </style>
-</section>
-
   <section id="info">
     <h2>Tiedotusta</h2>
     <p>
-      <a href="{{ instagram_url }}" target="_blank" rel="noreferrer noopener">Instagram</a>
-      <a href="{{ telegram_url }}" target="_blank" rel="noreferrer noopener">Telegram</a>
+      <a href="igurl" target="_blank" rel="noreferrer noopener">Instagram</a>
+      <a href="tgurl" target="_blank" rel="noreferrer noopener">Telegram</a>
     </p>
   </section>
 
@@ -232,27 +197,6 @@ Arvot ovat tärkeinä pitämiämme asioita, jotka ohjaavat jokapäiväisessä ty
     Mikäli koet tai huomaat toiminnassa tai tapahtumissa häiritsevää käytöstä, ota yhteyttä järjestäjiin.
     </p>
   </section>
-
-<div class="poop-container"></div>
-
-<script>
-  const poopContainer = document.querySelector('.poop-container');
-
-  function createPoop() {
-    const poop = document.createElement('div');
-    poop.classList.add('poop');
-    poop.textContent = '💩';
-    poop.style.left = Math.random() * window.innerWidth + 'px';
-    poop.style.animationDuration = (5 + Math.random() * 10) + 's';
-    poopContainer.appendChild(poop);
-
-    // Poista kun animaatio päättyy
-    setTimeout(() => poop.remove(), 15000);
-  }
-
-  // Luo emojit jatkuvasti hitaalla tahdilla
-  setInterval(createPoop, 800);
-</script>
 
 <script>
 // Nuolinapit scrollaukseen
