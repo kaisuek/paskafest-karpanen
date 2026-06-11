@@ -32,7 +32,8 @@
 	<h2>Esiintyjät</h2>
 	<p>TBA</p>
 
-//**  <div class="artist-gallery-container">
+
+<div class="artist-gallery-container">
     <button class="scroll-btn left" aria-label="Selaa vasemmalle">←</button>
 
     <div class="artist-gallery" id="artistGallery">
@@ -56,7 +57,7 @@
     </div> 
 
     <button class="scroll-btn right" aria-label="Selaa oikealle">→</button> 
-  </div>	**//
+</div>
   </section>
 
 
@@ -82,18 +83,17 @@
     <p>infoa altaasta ja paskasta</p>
   </section>
 
-//** <section id="kuvagalleria">
+<section id="kuvagalleria">
     <h2>Kuvia aiemmilta vuosilta</h2>
     <p>
     </p>
-  </section> **//
+  </section>
 
   <section id="info">
     <h2>Tiedotusta</h2>
     <p>
       <a href="https://instagram.com/paskafest" target="_blank" rel="noreferrer noopener">Instagram</a>
       <a href="https://t.me/paskafest" target="_blank" rel="noreferrer noopener">Telegram</a>
-      <a href="meiliosoite" target="_blank" rel="noreferrer noopener">Meili</a>
     </p>
   </section>
 
@@ -101,9 +101,9 @@
 <section id="jarjestajat">
     <h2>Järjestäjät</h2>
     <p>
-      <a href="xxx" target="_blank" rel="noreferrer noopener">Entropy ry</a>
-      <a href="xxx" target="_blank" rel="noreferrer noopener">Katu ry</a>
-      <a href="xxx" target="_blank" rel="noreferrer noopener">Dopercurious Entertainment ry</a>
+      <p href="xxx" target="_blank" rel="noreferrer noopener">Entropy ry</p>
+      <p href="xxx" target="_blank" rel="noreferrer noopener">Katu ry</p>
+      <p href="xxx" target="_blank" rel="noreferrer noopener">Dopercurious Entertainment ry</p>
     </p>
   </section>
 
@@ -234,19 +234,17 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
-<p>Kävijälaskuri <span id="visitor-count">...</span></p>
+<p>Kävijälaskuri <span id="visitor-count"></span></p>
 
-<script>
 <div class="paska-counter">
   <div class="counter-label">Kävijälaskuri</div>
-  <div class="counter-number" id="visitor-count">...</div>
-  <div class="counter-note" id="counter-note">vähän fiiliksen mukaan</div>
+  <div class="counter-number" id="visitor-count">Lasketaan...</div>
 </div>
 
 <script>
   const counterEl = document.getElementById("visitor-count");
-  const noteEl = document.getElementById("counter-note");
 
+  // Endpoint, johon otetaan yhteyttä
   const counterUrl = "https://countapi.mileshilliard.com/api/v1/hit/paskafest-visits";
 
   function dailyChaosFactor() {
@@ -262,27 +260,23 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   fetch(counterUrl)
-    .then(response => response.json())
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("API kyykkäsi tilaan: " + response.status);
+      }
+      return response.json();
+    })
     .then(data => {
       const realCount = data.value;
-      const chaos = dailyChaosFactor();
+      const chaos = dailyChaosFactor(); // Kaaoskerroin lasketaan yhä salaa taustalla
       const fakeCount = Math.max(1, Math.round(realCount * (1 + chaos)));
 
-      counterEl.textContent = fakeCount;
-
-      if (chaos < -0.05) {
-        noteEl.textContent = "tänään laskuri vähättelee yleisöryntäystä";
-      } else if (chaos > 0.05) {
-        noteEl.textContent = "tänään laskuri valehtelee ylöspäin";
-      } else {
-        noteEl.textContent = "tänään laskuri on epäilyttävän lähellä totuutta";
-      }
+      counterEl.textContent = fakeCount; // Lyödään manipuloitu luku tauluun vähin äänin
     })
-    .catch(() => {
-      counterEl.textContent = "???";
-      noteEl.textContent = "laskuri meni paskaksi";
+    .catch((error) => {
+      console.error("Laskuri hajosi:", error);
+      counterEl.textContent = "???"; // Jos API kaatuu, näytetään vain kysymysmerkit
     });
 </script>
-
 </body>
 </html>
