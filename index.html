@@ -237,10 +237,10 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .then(data => {
       const realCount = data.value;
-      const chaos = dailyChaosFactor(); // Kaaoskerroin lasketaan yhä salaa taustalla
+      const chaos = dailyChaosFactor(); // Pientä säätöä
       const fakeCount = Math.max(1, Math.round(realCount * (1 + chaos)));
 
-      counterEl.textContent = fakeCount; // Lyödään manipuloitu luku tauluun vähin äänin
+      counterEl.textContent = fakeCount; // Hähää luku
     })
     .catch((error) => {
       console.error("Laskuri hajosi:", error);
