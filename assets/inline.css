@@ -68,6 +68,87 @@ body {
   padding-top: 90px;
 }
 
+/* 1. The Hero Container */
+.fly-hero-banner {
+  position: relative;
+  width: 100vw;             /* Force it to span the full browser width */
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;       /* These 3 lines break out of the body's 80% width restriction */
+  margin-right: -50vw;
+  
+  height: 300px;
+  background: transparent;  /* No background color, uses body area background */
+  overflow: hidden;         /* Keeps flies inside the banner area */
+}
+
+/* 2. Base Fly Styles & Pixelation */
+.fly {
+  position: absolute;
+  width: 25px;              /* Adjust size of the fly here */
+  height: auto;
+  opacity: 0.85;            /* Slight transparency makes them look faster */
+  
+  /* Keeps your pixel art fly perfectly sharp and retro */
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  
+  /* Standard infinite looping animation */
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+/* 3. Unique Flight Paths and Speeds for each Fly */
+.fly-1 {
+  top: 20%; left: 10%;
+  animation: swarm-pattern-A 4s infinite;
+}
+.fly-2 {
+  top: 60%; left: 30%;
+  animation: swarm-pattern-B 5s infinite;
+}
+.fly-3 {
+  top: 40%; left: 70%;
+  animation: swarm-pattern-C 3.5s infinite;
+}
+.fly-4 {
+  top: 15%; left: 50%;
+  animation: swarm-pattern-B 6s infinite;
+}
+.fly-5 {
+  top: 75%; left: 80%;
+  animation: swarm-pattern-A 4.5s infinite;
+}
+.fly-6 {
+  top: 50%; left: 20%;
+  animation: swarm-pattern-C 5.5s infinite;
+}
+
+/* 4. The Swarm Movement Animations (Keyframes) */
+/* Pattern A: Zig-Zag loop */
+@keyframes swarm-pattern-A {
+  0%, 100% { transform: translate(0, 0) scaleX(1); }
+  25%      { transform: translate(40px, -30px) scaleX(1); }
+  50%      { transform: translate(10px, 20px) scaleX(-1); } /* Flips fly direction */
+  75%      { transform: translate(-30px, -10px) scaleX(-1); }
+}
+
+/* Pattern B: Chaotic Circle loop */
+@keyframes swarm-pattern-B {
+  0%, 100% { transform: translate(0, 0) scaleX(-1); }
+  33%      { transform: translate(-50px, 40px) scaleX(1); }
+  66%      { transform: translate(30px, -40px) scaleX(1); }
+}
+
+/* Pattern C: Erratic Fast Shaking loop */
+@keyframes swarm-pattern-C {
+  0%, 100% { transform: translate(0, 0) scaleX(1); }
+  20%      { transform: translate(15px, 25px) scaleX(1); }
+  40%      { transform: translate(-25px, -15px) scaleX(-1); }
+  60%      { transform: translate(35px, -5px) scaleX(1); }
+  80%      { transform: translate(-10px, 30px) scaleX(-1); }
+}
+
 /* Otsikko 1 (h1) */
 h1 {
   font-family: 'Press Start 2P', 'Courier New', Courier, monospace;
