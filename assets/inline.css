@@ -6,33 +6,31 @@ description {
 
 /* HEADER */
 
-/* Headerin päälaatikko */
+/* Kiinteä header */
 .site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px; 
+  background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px; /* Nostettu 100px, jotta 2em mahtuu kahdelle riville */
-  width: 100%;
   box-sizing: border-box;
-  overflow: hidden;
-  padding: 5px 0; /* Pieni suoja-alue ylös ja alas */
+  padding: 0 5%;
+  z-index: 1000;
 }
 
-/* Vasemman laidan kuva skaalautuu nyt uuden 100px korkeuden mukaan */
-.header-hero-img {
-  height: 100px;      
-  width: auto;        
-  flex-shrink: 0;     
-}
-
-/* Keskellä oleva otsikko */
+/* Otsikko yhdellä rivillä */
 .header-title {
   font-family: 'Press Start 2P', 'Courier New', Courier, monospace;
-  font-size: 2em;     /* Skaalautuva koko (useimmiten 32px) */
-  line-height: 1.3;   /* Antaa riveillle hieman tilaa hengittää */
+  font-size: 2em;
+  white-space: nowrap; /* Estetään tekstin rivittyminen missään tilanteessa */
   text-align: center;
   margin: 0;
-  flex-grow: 1;       
+  flex-grow: 1;
+  padding-left: 40px; /* Pitää tekstin keskellä suhteessa hampurilaismenuun */
   
   /* Pikseli-terävyys */
   -webkit-font-smoothing: none;
@@ -41,7 +39,7 @@ description {
   text-rendering: optimizeSpeed;
 }
 
-/* Oikean laidan hampurilaisvalikko (suurennettu sopimaan 100px headeriin) */
+/* Hampurilaisvalikko */
 .hamburger-menu {
   display: flex;
   flex-direction: column;
@@ -58,14 +56,15 @@ description {
 .hamburger-menu span {
   display: block;
   width: 100%;
-  height: 5px; /* Paksuuntuu suhteessa kokoon */
-  background-color: #000000;
+  height: 5px;
+  background-color: #4B0082;
 }
 
 /* Tausta */
 
 body {
   background-color: #f2f238;
+  padding-top: 90px;
 }
 
 /* Otsikko 1 (h1) */
