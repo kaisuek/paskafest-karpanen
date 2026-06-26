@@ -14,7 +14,7 @@ description {
   width: 100%;
   height: 100px; 
   display: flex;
-  background-color: #f2f238;
+  background-color: #4B0082;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
@@ -25,7 +25,8 @@ description {
 /* Otsikko yhdellä rivillä */
 .header-title {
   font-family: 'Press Start 2P', 'Courier New', Courier, monospace;
-  font-size: 2.5em;
+  font-size: 2em;
+  color: #4B0082; /* tumma violetti */
   white-space: nowrap; /* Estetään tekstin rivittyminen missään tilanteessa */
   text-align: center;
   margin: 0;
