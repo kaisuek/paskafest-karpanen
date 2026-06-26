@@ -26,7 +26,7 @@ description {
 .header-title {
   font-family: 'Press Start 2P', 'Courier New', Courier, monospace;
   font-size: 2em;
-  color: #4B0082; /* tumma violetti */
+  color: #f2f238; /* keltainen */
   white-space: nowrap; /* Estetään tekstin rivittyminen missään tilanteessa */
   text-align: center;
   margin: 0;
