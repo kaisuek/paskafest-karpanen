@@ -4,6 +4,9 @@ description {
   display: none;
 }
 
+
+/* HEADER */
+
 /* --- Hampurilaisvalikko ja navigaatio --- */
 
 .site-header {
@@ -72,8 +75,6 @@ description {
 .site-menu a:hover {
   text-decoration: underline;
 }
-
-/* HEADER */
 
 /* Kiinteä header */
 .site-header {
@@ -157,7 +158,7 @@ h2 {
 /* Leipäteksti (p) */
 p {
   font-family: 'Quicksand', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 2em;
+  font-size: 1.5em;
   line-height: 1.5em;
   text-align: center;
   color: #222;
