@@ -4,6 +4,11 @@ description {
   display: none;
 }
 
+/* --- Estetään osioiden jääminen kiinnitetyn yläpalkin alle --- */
+section {
+  scroll-margin-top: 120px; /* 100px header + 20px */
+}
+
 
 /* HEADER */
 
