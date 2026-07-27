@@ -78,6 +78,29 @@
     </p>
   </section>
 
+<!-- Valikko-->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerBtn = document.querySelector('.hamburger-menu');
+    const siteMenu = document.getElementById('site-menu');
+
+    if (hamburgerBtn && siteMenu) {
+      // Avaa ja sulkee valikon napista lisäämällä/poistamalla "open"-luokan
+      hamburgerBtn.addEventListener('click', () => {
+        siteMenu.classList.toggle('open');
+      });
+
+      // Sulkee valikon automaattisesti, kun jotain linkkiä painetaan
+      const menuLinks = siteMenu.querySelectorAll('a');
+      menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          siteMenu.classList.remove('open');
+        });
+      });
+    }
+  });
+</script>	
+
   <!-- Emoji container -->
   <div id="poop-emojis" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 2;"></div>
 
