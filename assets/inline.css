@@ -384,6 +384,36 @@ p {
   right: 0.25rem;
 }
 
+/* --- Accordion (Haitariosiot) --- */
+
+.accordion {
+  margin-bottom: 1.5rem;
+}
+
+.accordion-header {
+  cursor: pointer; /* Vaihtaa hiiren kursorin sormeksi */
+  display: flex;
+  justify-content: space-between; /* Työntää plussan/miinuksen oikeaan reunaan */
+  align-items: center;
+  user-select: none; /* Estää otsikon tekstin maalaamisen tuplaklikatessa */
+}
+
+/* Piilotetaan sisältö oletuksena (jos 'open' luokkaa ei ole) */
+.accordion-content {
+  display: none;
+  padding-top: 0.5rem;
+}
+
+/* Näytetään sisältö, kun 'open' luokka on aktiivinen */
+.accordion.open .accordion-content {
+  display: block;
+}
+
+.toggle-icon {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
 /* Laskuri */
 
 .paska-counter {
