@@ -84,6 +84,7 @@ section {
   color: #f2f238; /* Keltainen teksti */
   font-size: 2rem; 
   line-height: 2;
+  text-transform: uppercase;
 }
 
 .site-menu a:hover {
