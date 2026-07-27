@@ -82,8 +82,8 @@ section {
   text-decoration: none;
   font-family: 'Press Start 2P', 'Courier New', Courier, monospace;
   color: #f2f238; /* Keltainen teksti */
-  font-size: 3rem; 
-  line-height: 3;
+  font-size: 2rem; 
+  line-height: 2;
   text-transform: uppercase;
 }
 
