@@ -10,7 +10,7 @@ description {
 /* --- Hampurilaisvalikko ja navigaatio --- */
 
 .site-header {
-  position: relative; /* Jotta valikko asettuu oikein otsikon alle */
+  position: relative;
 }
 
 /* Hampurilaisnappi */
@@ -25,6 +25,8 @@ description {
   cursor: pointer;
   padding: 0;
   flex-shrink: 0;
+  position: relative; /* Lisätty, jotta z-index toimii */
+  z-index: 101; /* Nostetaan valikon (100) yläpuolelle! */
 }
 
 .hamburger-menu span {
@@ -34,31 +36,37 @@ description {
   background-color: #f2f238;
 }
 
-/* Avautuva valikko */
+/* Avautuva valikko - Koko ruudun kokoinen overlay */
 .site-menu {
   display: none;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: #fff;
-  border: 2px solid #000;
-  padding: 1rem;
+  position: fixed; /* Irrotetaan normivirrasta ja kiinnitetään ruutuun */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #4B0082; /* Violetti tausta */
   z-index: 100;
-  box-shadow: 4px 4px 0px #000;
+  
+  /* Sisällön keskittäminen ruudun keskelle */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .site-menu.open {
-  display: block;
+  display: flex; /* display: block sijaan flex, jotta keskitys toimii */
 }
 
 .site-menu ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  text-align: center;
+  width: 90%; /* Annetaan hieman pelivaraa reunoille */
 }
 
 .site-menu li {
-  margin-bottom: 0.8rem;
+  margin-bottom: 2rem;
 }
 
 .site-menu li:last-child {
@@ -67,9 +75,10 @@ description {
 
 .site-menu a {
   text-decoration: none;
-  color: #000;
-  font-weight: bold;
-  font-size: 1.1rem;
+  font-family: 'Press Start 2P', 'Courier New', Courier, monospace;
+  color: #f2f238; /* Keltainen teksti */
+  font-size: 2rem; 
+  line-height: 2;
 }
 
 .site-menu a:hover {
