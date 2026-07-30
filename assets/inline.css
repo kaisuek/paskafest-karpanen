@@ -127,7 +127,7 @@ section {
   z-index: 1000;
 }
 
-/* Otsikko yhdellä rivillä */
+/* Yläpalkin otsikko */
 .header-title {
   font-family: 'Press Start 2P', 'Courier New', Courier, monospace;
   font-size: 2em;
@@ -137,10 +137,11 @@ section {
   margin: 0;
   flex-grow: 1;
   padding-left: 40px; /* Pitää tekstin keskellä suhteessa hampurilaismenuun */
-
+}
+  
   /* Otsikon linkin tyylit */
 .header-title a {
-  color: inherit; /* Ottaa saman keltaisen värin, joka on määritelty header-title -luokassa */
+  color: #f2f238; /* Ottaa saman keltaisen värin, joka on määritelty header-title -luokassa */
   text-decoration: none; /* Poistaa alleviivauksen */
 }
   
