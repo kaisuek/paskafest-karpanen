@@ -200,8 +200,8 @@ h2 {
 /* Leipäteksti (p) */
 p {
   font-family: 'Quicksand', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 1.8em;
-  line-height: 2em;
+  font-size: 2em;
+  line-height: 1.8em;
   text-align: center;
   color: #222;
   margin-bottom: 1em;
