@@ -473,14 +473,14 @@ p {
 }
 
 .counter-label {
-  font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
+  font-family: 'Comic Neue', 'Comic Sans MS', sans-serif;
   font-size: 16px;
   color: #4B0082;
   margin-bottom: 0.75rem;
 }
 
 .counter-number {
-  font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
+  font-family: 'Comic Neue', 'Comic Sans MS', sans-serif;
   font-size: 4rem;
   line-height: 1;
   color: #2f7d32;
