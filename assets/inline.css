@@ -137,6 +137,12 @@ section {
   margin: 0;
   flex-grow: 1;
   padding-left: 40px; /* Pitää tekstin keskellä suhteessa hampurilaismenuun */
+
+  /* Otsikon linkin tyylit */
+.header-title a {
+  color: inherit; /* Ottaa saman keltaisen värin, joka on määritelty header-title -luokassa */
+  text-decoration: none; /* Poistaa alleviivauksen */
+}
   
   /* Pikseli-terävyys */
   -webkit-font-smoothing: none;
