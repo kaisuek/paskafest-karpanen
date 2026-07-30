@@ -207,32 +207,48 @@ p {
   margin-bottom: 1em;
 }
 
-/* Leijuvat kakat */
+/* Kakkaa */
 
+/* --- Molemmat kakat (ylös ja alas) --- */
+#poop-emojis,
 .poop-container {
   position: fixed !important;
-  overflow: hidden !important;
-  top: 0;
-  left: 0;
+  top: 0 !important;
+  left: 0 !important;
   width: 100vw !important;
   height: 100vh !important;
-  pointer-events: none; /* ettei häirihte klikkauksia */
-  z-index: 9999;
+  overflow: hidden !important; /* TÄMÄ ESTÄÄ HYPPIMISEN */
+  pointer-events: none !important; /* Ei estä linkkien klikkaamista */
+  z-index: 9999 !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
+/* Alaspäin putoava kakka */
 .poop {
   position: absolute;
-  top: -50px;
+  top: -60px;
   font-size: 40px;
   animation: fall linear infinite;
-  transition: transform 0.1s linear;
-  will-change: transform;
   opacity: 0.8;
 }
 
+/* Animaatio ylös */
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
+
+/* Animaatio alas */
 @keyframes fall {
   0% {
-    transform: translateY(-50px);
+    transform: translateY(0);
     opacity: 0.8;
   }
   100% {
@@ -240,6 +256,7 @@ p {
     opacity: 0;
   }
 }
+
 
 /* Kärpänen*/
 
