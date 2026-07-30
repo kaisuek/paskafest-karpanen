@@ -69,6 +69,7 @@ section {
   height: 100vh;
   background-color: #4B0082; /* Violetti tausta */
   z-index: 100;
+  box-sizing: border-box;
   
   /* Sisällön asettelu ja skrollauksen salliminen */
   flex-direction: column;
@@ -150,7 +151,7 @@ section {
 
 body {
   background-color: #f2f238;
-  padding-top: 90px;
+  padding-top: 120px;
 }
 
 /* Otsikko 1 (h1) */
