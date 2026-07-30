@@ -103,6 +103,7 @@
       // Avaa ja sulkee valikon napista lisäämällä/poistamalla "open"-luokan
       hamburgerBtn.addEventListener('click', () => {
         siteMenu.classList.toggle('open');
+		hamburgerBtn.classList.toggle('open');
       });
 
       // Sulkee valikon automaattisesti, kun jotain linkkiä painetaan
@@ -110,6 +111,7 @@
       menuLinks.forEach(link => {
         link.addEventListener('click', () => {
           siteMenu.classList.remove('open');
+		  hamburgerBtn.classList.remove('open');
         });
       });
     }
