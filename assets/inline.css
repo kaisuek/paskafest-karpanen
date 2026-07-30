@@ -137,6 +137,12 @@ section {
   margin: 0;
   flex-grow: 1;
   padding-left: 40px; /* Pitää tekstin keskellä suhteessa hampurilaismenuun */
+
+    /* Pikseli-terävyys */
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: none;
+  font-smoothing: none;
+  text-rendering: optimizeSpeed;
 }
   
   /* Otsikon linkin tyylit */
@@ -145,13 +151,6 @@ section {
   text-decoration: none; /* Poistaa alleviivauksen */
 }
   
-  /* Pikseli-terävyys */
-  -webkit-font-smoothing: none;
-  -moz-osx-font-smoothing: none;
-  font-smoothing: none;
-  text-rendering: optimizeSpeed;
-}
-
 /* Tausta */
 
 body {
