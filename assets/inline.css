@@ -210,13 +210,13 @@ p {
 /* Leijuvat kakat */
 
 .poop-container {
-  position: fixed;
+  position: fixed !important;
+  overflow: hidden !important;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw !important;
+  height: 100vh !important;
   pointer-events: none; /* ettei häirihte klikkauksia */
-  overflow: hidden;
   z-index: 9999;
 }
 
