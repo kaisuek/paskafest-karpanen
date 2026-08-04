@@ -287,11 +287,16 @@ p {
 
 /* Otsikko ja johdantoteksti */
 .artist-gallery-wrapper h2 {
-  font-family: 'Comic Neue', 'Comic Sans MS', 'Comic Sans', 'Marker Felt', 'fantasy', sans-serif;
+  font-family: 'Press Start 2P', 'Courier New', Courier, monospace;
+  text-transform: uppercase;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: none;
+  font-smoothing: none;
   color: #4B0082;
-  font-size: 3em;
-  margin-bottom: 0.5rem;
   text-align: center;
+  font-size: 1.5em;
+  margin-top: 2em;
+  margin-bottom: 1em;
 }
 
 /* Itse galleria: vaakarullaus */
@@ -342,7 +347,7 @@ p {
 
 /* Bändin nimi */
 .artist h3 {
-  font-family: 'Comic Neue', 'Comic Sans MS', 'Comic Sans', 'Marker Felt', 'fantasy', sans-serif;
+  font-family: 'Press Start 2P', 'Courier New', Courier, monospace;
   color: #4B0082;
   font-size: 2em;
   margin: 1.5rem 0;
