@@ -340,7 +340,7 @@ p {
 
 /* Kuva */
 .artist img {
-  width: 400px;
+  width: 600px;
   height: auto;
   border-radius: 4px;
 }
@@ -349,14 +349,15 @@ p {
 .artist h3 {
   font-family: 'Press Start 2P', 'Courier New', Courier, monospace;
   color: #4B0082;
-  font-size: 2em;
+  text-transform: uppercase;
+  font-size: 1em;
   margin: 1.5rem 0;
-  max-width: 350px;
+  max-width: 400px;
   margin: 0 auto; /* keskittää tekstin kortissa */
   word-wrap: break-word;
   overflow-wrap: break-word;
   white-space: normal;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 /* Sepon oma */
@@ -371,10 +372,10 @@ p {
 
 /* Esittelyteksti */
 .artist p {
-  font-size: 1.5em;
+  font-size: 2em;
   color: #333;
   margin-bottom: 2rem;
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto; /* keskittää tekstin kortissa */
   word-wrap: break-word;
   overflow-wrap: break-word;
