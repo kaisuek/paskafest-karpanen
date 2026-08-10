@@ -178,12 +178,9 @@ h1 {
 #hero p {
   font-family: 'Press Start 2P', 'Courier New', Courier, monospace;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin: 1em;
   text-transform: uppercase;
-  -webkit-font-smoothing: none;
-  -moz-osx-font-smoothing: none;
-  font-smoothing: none;
   color: #4B0082; /* tumma violetti */
 }
 
@@ -263,18 +260,6 @@ p {
   }
 }
 
-
-/* Kärpänen*/
-
-    .fly {
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/73/Fly_icon_01.svg');
-      background-size: contain;
-      background-repeat: no-repeat;
-      pointer-events: none;
-    }
 
 /* Artistigalleria*/
 
@@ -415,7 +400,7 @@ p {
 /* Nuolet */
 .scroll-btn {
   position: absolute;
-  top: 40%;
+  top: 30%;
   transform: translateY(-50%);
   background-color: #4B0082;
   color: white;
