@@ -175,7 +175,7 @@ h1 {
 
 /* --- Hero-alue--- */
 #hero {
-  background-image: url('assets/img/viikin-paska-allas.jpg'); 
+  background-image: url('img/viikin-paska-allas.jpg'); 
   
   /* Taustakuvan skaalaus ja sijoittelu */
   background-size: cover; 
