@@ -179,8 +179,12 @@ h1 {
   font-family: 'Press Start 2P', 'Courier New', Courier, monospace;
   text-align: center;
   font-size: 1.5em;
-  width: 100%;
   margin: 1em;
+  text-transform: uppercase;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: none;
+  font-smoothing: none;
+  color: #4B0082; /* tumma violetti */
 }
 
 
