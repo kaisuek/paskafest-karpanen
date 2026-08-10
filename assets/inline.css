@@ -173,7 +173,7 @@ h1 {
   margin-bottom: 0.5em;
 }
 
-/* --- Hero-alueen taustakuva ja asettelu --- */
+/* --- Hero-alue--- */
 #hero {
   /* VAIHDA TÄHÄN OMAN KUVASI POLKU */
   background-image: url('assets/img/Viikin-paska-allas.jpg'); 
@@ -185,8 +185,8 @@ h1 {
   
   /* Koko ja asettelu */
   width: 100%;
-  height: 675px;
-  max-height: 675px;
+  height: 400px;
+  max-height: 400px;
   
   /* Sisällön (tekstin) keskittäminen kuvan päälle */
   display: flex;
@@ -196,7 +196,7 @@ h1 {
   box-sizing: border-box;
 }
 
-/* --- Hero-alueen teksti kuvan päällä --- */
+/* --- Hero-alue--- */
 #hero p {
   /* Fontin tyylit */
   font-family: 'Press Start 2P', 'Courier New', Courier, monospace;
@@ -208,7 +208,7 @@ h1 {
   margin: 1em;
   
   /* Laatikon tyylit */
-  background-color: rgba(75, 0, 130, 0.85); /* Puoliläpinäkyvä violetti */
+  background-color: rgba(75, 0, 130, 0.6); /* Puoliläpinäkyvä violetti */
   padding: 1.5rem;
   max-width: 800px;
   border: 2px solid #000;
